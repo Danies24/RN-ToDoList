@@ -58,7 +58,9 @@ export default function App() {
               <Text style={style.text}>
                 {index + 1}.{item.work}
               </Text>
-              <TouchableOpacity onPress={() => delFunction(index)}>
+              <TouchableOpacity
+                style={style.icon}
+                onPress={() => delFunction(index)}>
                 <FontAwesomeIcon icon={faTrashCan} size={25} color="#313552" />
               </TouchableOpacity>
             </View>
@@ -115,9 +117,9 @@ const style = StyleSheet.create({
     letterSpacing: 2,
   },
   listBox: {
-    padding: 20,
+    paddingVertical: 5,
     margin: 20,
-    marginVertical: 5,
+    marginVertical: 15,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -129,5 +131,9 @@ const style = StyleSheet.create({
     color: '#313552',
     letterSpacing: 1.5,
     width: '75%',
+  },
+  icon: {
+    width: '25%',
+    alignItems: 'center',
   },
 });
