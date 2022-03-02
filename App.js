@@ -30,8 +30,6 @@ export default function App() {
     setMainArray(
       mainArray.filter(element => mainArray.indexOf(element) !== index),
     );
-    // setMainArray(mainArray.filter(element => element.id !== id))
-    // console.log('hello');
   };
 
   return (
